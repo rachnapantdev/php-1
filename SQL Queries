@@ -1,0 +1,114 @@
+Data 
+Database : Collection of data in the form of row and columns.
+
+Table : Entity
+Rows :  Tuple/ Records
+Column: Attribute
+
+	Employee
+Id	NAME	CITY
+1	Aman	Delhi
+2	Soni	Dehradun
+3	Lakhan	Noida
+
+Employee :  Entity
+Attributes : ID NAME CITY
+Record	1> 1 Aman Delhi
+
+RDBMS :  Relational Database Managament System
+
+SQL :  Structured Query Langauge.
+
+
+=========================================== QUERY/Commands========================================
+1. Create Database 
+	create database databaseName;
+
+2. Use the Database 
+	use databaseName;
+
+3. Create Table
+
+		create table tableName(colName datatype(size) , ....);
+Data type: int , varchar, char, decimal, date , ....
+
+4. Insert data to the table :
+	insert into tableName(colName,...) values(val1, ...);
+
+5. Fetch data from the table
+
+	It will fetch all the data from the table
+	select * from tableName; 
+
+	To fetch specific columns
+	select col1, col2, .. from tableName;
+
+
+=======================================================================================
+
+create database mewar;
+
+CREATE TABLE student (sid int, sname varchar(29), city varchar(44) , doj date);
+
+INSERT into student(sid, sname, city, doj) VALUES(1, 'Suman', 'Noida','2026-03-12');
+
+INSERT into student(sid, sname, city, doj) VALUES(2, 'Kumar','Noida','2025-04-12');
+
+insert into student(sid, sname, city, doj)
+VALUES (3,'Komal','Ghaziabad','2023-03-12'),
+(4, 'Aman','Nainital', '2022-09-19'),
+(5,'Gopal','Agra','2022-07-19')
+
+
+Keys :
+1. Primary Key : To make a column unique
+2. Foreign Key : Link one table to another
+_________________________________________________________________
+
+create table tableName(colName data type primary key, ...);
+
+Example
+
+CREATE TABLE dept(did int PRIMARY KEY, dname varchar(33));
+
+INSERT into dept(did, dname)
+VALUES(1,'HR'),
+(2,'IT'),
+(3,'Sales'),
+(4,'Marketing')
+
+CREATE TABLE emp(eid int PRIMARY key AUTO_INCREMENT, ename varchar(33), city varchar(33), edid int, FOREIGN KEY(edid) REFERENCES dept(did) )
+
+INSERT into emp(ename, city, edid)
+VALUES('Aman','Delhi',2),
+('Naman','Noida',1),
+('Suman','Gurgaon',1),
+('Mohit','Nainital',4)
+===============================================================
+
+
+To fetch all the data from the table:
+
+select * from tableName;
+
+To fetch sepecific data :
+
+select colName1, colNam2, .... from tableName;
+
+Fetch data based on condition
+
+select * from tableName where condition;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
