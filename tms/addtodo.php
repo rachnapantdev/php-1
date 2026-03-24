@@ -47,25 +47,16 @@
 
 <body>
   <div class="container">
-    <form action="regdata.php" method="get">
-      <p class="reg"> Register Here  </p>
-      <div class="box">
-        <label for=""> Full Name </label>
-        <input type="text" name="fname">
-      </div>
-      <div class="box">
-        <label for=""> Email </label>
-        <input type="text" name="email">
-      </div>
-      <div class="box">
-        <label for=""> Password </label>
-        <input type="text" name="password">
-      </div>
-      <div class="box">
-        <input type="submit" value="Register">
-        <p> Already Registered? <a href="./login.php"> Login Here</a> </p>
-      </div>
+    <form action="./addtask.php" method="get">
+      <p class="reg"> Add Your Task Here </p>
       
+      <div class="box">
+        <label for=""> Add Task </label>
+        <input type="text" name="taskName">
+      </div>
+      <div class="box">
+        <input type="submit" value="Add">
+      </div>
     </form>
   </div>
 

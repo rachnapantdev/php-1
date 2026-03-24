@@ -59,7 +59,7 @@
         <input type="text" name="password">
       </div>
       <div class="box">
-        <input type="submit" value="Register">
+        <input type="submit" value="Login">
       </div>
     </form>
   </div>
